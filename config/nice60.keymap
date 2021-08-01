@@ -6,6 +6,40 @@
 #define NAVI 1
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_bt_clear {
+            timeout-ms = <50>;
+            key-positions = <13 52 58>;
+            bindings = <&bt BT_CLR>;
+        };
+
+        combo_bt_0 {
+            timeout-ms = <50>;
+            key-positions = <1 52 58>;
+            bindings = <&bt BT_SEL 0>;
+        };
+
+        combo_bt_1 {
+            timeout-ms = <50>;
+            key-positions = <2 52 58>;
+            bindings = <&bt BT_SEL 1>;
+        };
+
+        combo_bt_2 {
+            timeout-ms = <50>;
+            key-positions = <3 52 58>;
+            bindings = <&bt BT_SEL 2>;
+        };
+
+        combo_bt_3 {
+            timeout-ms = <50>;
+            key-positions = <4 52 58>;
+            bindings = <&bt BT_SEL 3>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
