@@ -9,6 +9,12 @@
     combos {
         compatible = "zmk,combos";
 
+        combo_reset {
+            timeout-ms = <300>;
+            key-positions = <0 41 58>;
+            bindings = <&reset>;
+        };
+
         combo_bt_clear {
             timeout-ms = <300>;
             key-positions = <13 41 58>;
