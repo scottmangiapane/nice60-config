@@ -1,5 +1,12 @@
 #!/bin/bash
 
+if ! command -v "docker" &> /dev/null
+then
+    echo "The 'docker' command was not found."
+    echo "Please install Docker to continue."
+    exit
+fi
+
 docker build -t nice60-build .
 
 mkdir -p dist
