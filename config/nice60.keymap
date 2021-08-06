@@ -6,43 +6,53 @@
 #define NAVI 1
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        combo_reset {
-            timeout-ms = <300>;
-            key-positions = <0 41 58>;
-            bindings = <&reset>;
+    behaviors {
+        f1_bt_0: f1_bt_0 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "f1_bt_0";
+            #binding-cells = <0>;
+            bindings = <&kp F1>, <&bt BT_SEL 0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        combo_bt_clear {
-            timeout-ms = <300>;
-            key-positions = <13 41 58>;
-            bindings = <&bt BT_CLR>;
+        f2_bt_1: f2_bt_1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "f2_bt_1";
+            #binding-cells = <0>;
+            bindings = <&kp F2>, <&bt BT_SEL 1>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        combo_bt_0 {
-            timeout-ms = <300>;
-            key-positions = <1 41 58>;
-            bindings = <&bt BT_SEL 0>;
+        f3_bt_2: f3_bt_2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "f3_bt_2";
+            #binding-cells = <0>;
+            bindings = <&kp F3>, <&bt BT_SEL 2>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        combo_bt_1 {
-            timeout-ms = <300>;
-            key-positions = <2 41 58>;
-            bindings = <&bt BT_SEL 1>;
+        f4_bt_3: f4_bt_3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "f4_bt_3";
+            #binding-cells = <0>;
+            bindings = <&kp F4>, <&bt BT_SEL 3>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        combo_bt_2 {
-            timeout-ms = <300>;
-            key-positions = <3 41 58>;
-            bindings = <&bt BT_SEL 2>;
+        f11_bt_clear: f11_bt_clear {
+            compatible = "zmk,behavior-mod-morph";
+            label = "f11_bt_clear";
+            #binding-cells = <0>;
+            bindings = <&kp F11>, <&bt BT_CLR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        combo_bt_3 {
-            timeout-ms = <300>;
-            key-positions = <4 41 58>;
-            bindings = <&bt BT_SEL 3>;
+        f12_reset: f12_reset {
+            compatible = "zmk,behavior-mod-morph";
+            label = "f12_reset";
+            #binding-cells = <0>;
+            bindings = <&kp F12>, <&reset>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -61,7 +71,7 @@
 
         navi_layer {
             bindings = <
-                &kp GRAVE &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp DEL
+                &kp GRAVE &f1_bt_0 &f2_bt_1 &f3_bt_2 &f4_bt_3 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &f11_bt_clear &f12_reset &kp DEL
                 &trans &trans &kp UP &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
                 &trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans &trans &trans &trans &trans &trans &trans &trans
                 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
