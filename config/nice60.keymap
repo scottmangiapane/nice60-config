@@ -43,7 +43,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "f11_bt_clear";
             #binding-cells = <0>;
-            bindings = <&kp F11>, <&bt BT_CLR>;
+            bindings = <&kp F11>, <&bt BT_CLR_ALL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -51,7 +51,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "f12_reset";
             #binding-cells = <0>;
-            bindings = <&kp F12>, <&reset>;
+            bindings = <&kp F12>, <&sys_reset>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };

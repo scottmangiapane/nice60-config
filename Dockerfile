@@ -1,4 +1,4 @@
-FROM zmkfirmware/zmk-build-arm:2.5
+FROM zmkfirmware/zmk-build-arm:3.5-branch
 
 WORKDIR /
 RUN git clone https://github.com/zmkfirmware/zmk.git
