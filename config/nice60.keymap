@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define DEFAULT 0
 #define NAVI 1
@@ -72,8 +73,8 @@
         navi_layer {
             bindings = <
                 &kp GRAVE &f1_bt_0 &f2_bt_1 &f3_bt_2 &f4_bt_3 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &f11_bt_clear &f12_reset &kp DEL
-                &trans &trans &kp UP &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                &trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &kp UP &trans &trans &trans &trans &trans &mmv MOVE_UP &mkp LCLK &mkp RCLK &trans &trans &trans
+                &trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans &trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans &trans &trans
                 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
                 &trans &trans &trans &trans &trans &trans &trans &trans
             >;
