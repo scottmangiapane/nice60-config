@@ -7,17 +7,10 @@
 
 / {
     behaviors {
-        safe_boot: safe_bootloader {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&none>, <&bootloader>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         safe_reset: safe_sys_reset {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&none>, <&sys_reset>;
+            bindings = <&trans>, <&sys_reset>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -38,9 +31,9 @@
         navi_layer {
             bindings = <
                 &kp GRAVE &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp DEL
-                &trans &kp HOME &kp UP &kp END &kp PG_UP &trans &trans &mkp LCLK &mmv MOVE_UP &mkp RCLK &trans &safe_reset &safe_boot &trans
+                &trans &kp HOME &kp UP &kp END &kp PG_UP &trans &trans &mkp LCLK &mmv MOVE_UP &mkp RCLK &trans &trans &trans &trans
                 &trans &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN &trans &trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans &trans &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PP &trans
+                &trans &trans &trans &trans &trans &safe_reset &trans &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PP &trans
                 &trans &trans &trans &trans &trans &trans &trans &trans
             >;
         };

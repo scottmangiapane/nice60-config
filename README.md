@@ -29,8 +29,9 @@ Upon completion, the following `.uf2` files are generated in the root directory:
 - `keyboard_settings_reset.uf2`: Clears Bluetooth pairing data on the keyboard.
 - `dongle_settings_reset.uf2`: Clears Bluetooth pairing data on the dongle.
 
+
 ## Flashing
 
-1. Enter bootloader mode on the device (either via keymap shortcut or by double-tapping the physical reset button).
+1. Double-tap the physical reset button on the device to enter bootloader mode.
 2. The device will mount as a USB mass storage drive.
 3. Copy the relevant `.uf2` file to the drive. The device will automatically flash the firmware and restart.
